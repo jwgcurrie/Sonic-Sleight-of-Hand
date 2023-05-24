@@ -1,0 +1,1503 @@
+﻿		  
+			  
+<defaults>
+/ inputdevice = keyboard
+
+/ screencolor = black
+/ txbgcolor = black
+/ txcolor = white
+/fontstyle = ("Trebuchet MS", 3.11%, false, false, false, false, 5, 1)
+
+
+</defaults>
+
+
+<values>
+/ mousey = 0
+/ mousex = 0
+/ responsey = 0
+/ responsex = 0
+/ trial_number = 0
+/ stimuli_time = 0
+
+// Max and min first and last frames for stimuli
+/ First_frame = 1
+/ Last_frame = 10
+/ audio_condition_select = 0
+/ pre_audio_condition_select_1 = 0
+/ pre_audio_condition_select_2 = 0
+/ pre_audio_condition_select_3 = 0
+/ visual_condition_select = 0
+/ first_frame_timeout_select = 0
+/ first_frame_timout = 10000
+/ probe_diff = 0
+// Demographic Values
+/Age = 0;
+/Sex = 0;
+/Handedness = 0;
+
+
+// Probe Test:
+/probe_final_frame_id = 0
+/probe_stim_select = 0
+
+/pre_probe_stim_select_1 = 0
+/pre_probe_stim_select_2 = 0
+/pre_probe_stim_select_3 = 0
+/pre_probe_stim_select_4 = 0
+/pre_probe_stim_select_5 = 0
+/pre_probe_stim_select_6 = 0
+
+/probe_response = 0
+
+/probe_displacement = 0
+
+// Index for counterbalancing audio and probe conditions correctly.  
+/i_R1 = 0 
+/i_R2 = 0
+/i_R3 = 0
+
+/i_W1 = 0
+/i_W2 = 0
+/i_W3 = 0
+
+//Final Questionaire Variables
+/survey_Q1 = 0;
+/survey_Q2 = 0;
+/survey_Q3 = 0;
+/survey_Q4 = 0;
+/survey_Q5 = 0;
+// Responsetime
+/response_time = 0;
+
+/practice_num = 0
+</values>
+
+<expt>
+
+
+//blocks = [
+	1 = Welcome_block;
+	2 = demographics;
+	3 = sound_check_block;
+	4 = Instruction_block;
+	5 = reach_block_practice;
+	6-30 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	31 = middle_break;
+	32-56 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	57 = middle_break;
+	58-82 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	83 = middle_break;
+	84-108 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	109 = middle_break;
+	110-134 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	135 = middle_break;
+	136-160 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	161 = middle_break;
+	162-186 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	187 = middle_break;
+	188-212 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	213 = middle_break;
+	214-238 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	239 = block.middle_break;
+	240-264 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	265 = middle_break;
+	266-290 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	291 = middle_break;
+	292-316 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	317 = block_final_questionaire;
+	318 = debrief_block;	
+]
+
+/blocks = [
+	1 = Welcome_block;
+	2 = demographics;
+	3 = sound_check_block;
+	4 = Instruction_block;
+	5 = reach_block_practice;
+	6-53 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	54 = middle_break;
+	55-102 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	103 = middle_break;
+	104-151 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	152 = middle_break;
+	153-200 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	201 = middle_break;
+	202-249 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	250 = middle_break;
+	251-298 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+	299 = block_final_questionaire;
+	300 = debrief_block;	
+]
+// blocks = [1 = block_final_questionaire]
+
+
+	//blocks = [
+	1-48 = noreplace(block_R1, block_R2, block_R3, block_W1, block_W2, block_W3);
+]
+
+
+	</expt>
+
+ <block sound_check_block>
+/trials = [1 = SoundCheck1, SoundCheck2]
+</block>
+
+<text soundcheck>
+/items = ("
+Sound Test
+
+
+
+Press 'Check' to play a sound clip
+
+If you can hear it, press continue
+
+If you cannot hear it, press 'No Sound' to quit and check your sound settings,
+then start the experiment again.
+
+If you have a problem restarting the experiment, contact the experimenter.
+")
+/ position = (50%, 45%)
+
+</text>
+
+<text Check>
+/items = (" Check ")
+/ txbgcolor = white
+/ txcolor = blue
+/ position = (50%, 45%)
+</text>
+
+<text nosound>
+/items = ("No Sound")
+/ txcolor = yellow
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+/ position = (15%, 90%)
+</text>
+
+<trial SoundCheck1>
+/ pretrialpause = 500
+/ stimulusframes = [1 = soundcheck, Check, continue, nosound]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (Check, continue, nosound)
+/ monkeyresponse = (continue)
+/ branch = [if(trial.SoundCheck1.response == "Check")trial.SoundCheck2]
+/ ontrialend = [if(trial.SoundCheck1.response == "nosound") script.abort()]
+</trial>
+
+<trial SoundCheck2>
+/ stimulusframes = [1 = soundcheck, Check, continue, test_audio, nosound]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (Check, continue, nosound)
+/ monkeyresponse = (continue)
+/ branch = [if(trial.SoundCheck2.response == "Check")trial.SoundCheck2]
+/ ontrialend = [if(trial.SoundCheck2.response == "nosound")script.abort()]
+</trial>
+
+
+<sound test_audio>
+	/items = ("test_audio.wav")
+</sound>
+
+<text Experiment_title>
+/items = ("Welcome to the study: Perception of robots in motion")
+/position = (50%,20%)
+</text>
+
+<text Reminder>
+/items = ("
+Different = spacebar
+ Same = no response")
+/position = (50%,80%)
+/color = yellow
+/erase = false
+</text>
+
+<text Consent_1>
+/ items = ("  			 Please read each statement carefully and click on the Agree button if you give consent:
+
+
+•	I understand that my participation in this project will involve carefully watching short videos of a robot in motion and 
+	making judgements about these actions using a computer keyboard and mouse. This will take around 45 minutes of my time.
+	
+•	I understand that I need wired earphones/headphones for this experiment, and I will participate in the experiment in a quiet environement.
+	
+•	I understand that participation in this study is entirely voluntary and that I can withdraw from the study at any time 
+	without providing a reason by pressing Ctrl+Q or Control+Q. This will terminate the study and your data will be deleted. 
+	It is not possible to withdraw the data once the study has been completed. 
+	
+•	I understand that withdrawing from the study may lead to loss of reimbursement.	
+	
+•	I understand that I can discuss any concerns with the experimenters before or after participating. 
+	
+	This research is carried out by Joel Currie and Professor Patric Bach in the School of Psychology, 
+
+University of Aberdeen.  
+
+Contact information:
+Joel Currie:		j.currie.22@abdn.ac.uk
+Professor Patric Bach:	patric.bach@abdn.ac.uk
+")
+/ fontstyle =  ("Trebuchet MS", 2.4%, false, false, false, false, 5, 1)
+/ position = (50%, 50%)
+/size = (80%,80%)
+</text>
+
+<text Consent_2>
+/ items = ("
+  			 Please read each statement carefully and click on the Agree button if you give consent:
+
+
+•	I understand that the information provided by me will be held anonymously so that it is impossible to trace this information back to me individually. 
+	Information will be held on a secure server and may be retained indefinitely. 
+   
+•	To ensure access to the data for the wider research community, the anonymous dataset may be archived in an online repository 
+	(e.g., the Open Science Framework, https://osf.io/) or sent to other researchers upon request for inspection.
+")
+/ fontstyle =  ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+/ position = (50%, 50%)
+/size = (80%,80%)
+
+</text>
+
+<text Consent_3>
+/ items = ("
+  		 Please read each statement carefully and click on the Agree button if you give consent:
+
+
+•	I confirm that I am between 18 and 40 years old. 
+
+•	I confirm that I have normal vision or I am currently wearing any glasses or contact lenses that I need for normal vision.  
+ 
+•	I confirm that I am using a computer or laptop (mobile phone and tablet responses will be deleted)
+
+•	I confirm that I am using wired earphones/headphones and completing the study in a quiet environment.
+ 
+•	I confirm that the purpose, participation information, and data storage of this research have been sufficiently explained.
+
+•	I understand that at the end of the experiment I will be provided with additional information about the purpose of this research. 
+
+
+")
+/ fontstyle =  ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+/ position = (50%, 50%)
+/size = (80%,80%)
+
+</text>
+
+<text withdraw>
+/ items = ("You have chosen to withdraw from the experiment.
+
+
+Thank you for your time. 
+")
+/ size = (80%, 80%)
+/ position = (50%, 50%)
+</text>
+
+<text agree>
+/items = ("AGREE")
+/ txcolor = green
+/ position = (90%, 90%)
+/ fontstyle = ("Trebuchet MS", 4.26%, false, false, false, false, 5, 1)
+</text>
+
+<text disagree>
+/items = ("DISAGREE")
+/ txcolor = red
+/ position = (10%, 90%)
+/ fontstyle = ("Trebuchet MS", 4.26%, false, false, false, false, 5, 1)
+</text>
+
+<text continue>
+/items = ("Click here to continue")
+/ txcolor = yellow
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+/ position = (85%, 90%)
+</text>
+
+<text back>
+/items = ("Click here to go back")
+/ txcolor = yellow
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+/ position = (15%, 90%)
+</text>
+
+
+<text oops>
+/items = ("Click here if this was an accident
+and continue with the study")
+/ txcolor = yellow
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+/ position = (15%, 90%)
+</text>
+
+<text continuewithdraw>
+/items = ("Click here to continue and withdraw")
+/ txcolor = yellow
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+/ position = (85%, 90%)
+
+</text>
+
+<text morepractice>
+/items = ("or to do more practice, click here")
+/ txcolor = yellow
+/ fontstyle = ("Trebuchet MS", 2%, false, false, false, false, 5, 1)
+/ position = (15%, 95%)
+</text>
+
+<text reinstruct>
+/items = ("To see the instructions again, 
+click here")
+/ txcolor = yellow
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+/ position = (15%, 90%)
+</text>
+
+<text startpractice>
+/items = ("To start practice, 
+click here")
+/ txcolor = yellow
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+/ position = (85%, 90%)
+</text>
+
+<text startexpt>
+/items = ("To start the experiment, 
+click here")
+/ txcolor = yellow
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+/ position = (85%, 90%)
+</text>
+
+
+<text Blank>
+/ items = ("")
+/ position = (50%, 50%)
+/ txcolor = black
+/ txbgcolor = black
+</text>
+
+<picture welcome>
+/ items = ("welcomepic.jpg")
+/ size = (90%, 90%)
+/ position = (50%, 50%)
+</picture>
+
+<trial Welcome_trial>
+// ontrialbegin = [values.Experiment = "Robot_RM"]
+/ stimulusframes = [1 = welcome, Experiment_title]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (welcome)
+/ branch=[if (computer.platform == "and" || computer.platform == "ios" ) trial.forced_exit]
+</trial>
+
+<trial forced_exit>
+/ pretrialpause = 500
+/ stimulusframes = [1 = t_forced_exit, thx]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ branch = [if (trial.forced_exit.response == "thx") script.abort()]
+/ validresponse = (thx)
+</trial>
+
+
+
+<text t_forced_exit>
+/ items = ("We have detected you are using a mobile device, this is not permitted for this experiment please use a desktop or laptop.
+Press 'Continue' to Exit")
+</text>
+
+<trial Consent1>
+
+/ pretrialpause = 500
+/ stimulusframes = [1 = Consent_1, agree, disagree]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (agree, disagree)
+/ monkeyresponse = (agree)
+/ branch = [if(trial.Consent1.response == "disagree")trial.Withdrawn]
+</trial>
+
+
+<trial Consent2>
+
+/ pretrialpause = 500
+/ stimulusframes = [1=Consent_2, agree, disagree]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (agree, disagree)
+/ monkeyresponse = (agree)
+/ branch = [if(trial.Consent2.response == "disagree")trial.Withdrawn]
+</trial>
+
+<trial Consent3>
+/ pretrialpause = 500
+/ stimulusframes = [1=Consent_3, agree, disagree]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (agree, disagree)
+/ monkeyresponse = (agree)
+/ branch = [if(trial.Consent3.response == "disagree")trial.Withdrawn]
+/ posttrialpause = 500
+</trial>
+
+<textbox Age>
+/ caption = "Please enter your age (in years):"
+/ required = false
+/ orientation = horizontal
+/ position = (20%, 45%)
+/ fontstyle = ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+</textbox>
+
+<checkboxes Sex>
+/ caption="Please confirm your sex:"
+/ options=("Male", "Female", "Prefer not to say")
+/ other = "Other"
+/ range = (1,1)
+/ orientation = horizontal
+/ required = true
+/ position = (20%, 55%) 
+/ fontstyle = ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+</checkboxes>
+
+
+<checkboxes Handedness>
+/ caption = "Please confirm the hand that you write with:"
+/ options = ("Right-handed", "Left-handed", "Both", "Prefer not to say")
+/range = (1,1)
+/ required = true
+/ orientation = horizontal
+/ position = (20%, 70%)
+/ fontstyle = ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+</checkboxes>
+
+
+<text thanks>
+/ items = ("Thank you for agreeing to take part!
+")
+/ position = (30%, 30%)
+/ fontstyle = ("Trebuchet MS", 2.8%, false, false, false, false, 5, 1)
+/size = (80%,80%)
+
+</text>
+
+<text break>
+/ items = ("Time for a break.")
+/ position = (50%, 40%)
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+</text>
+
+<block Welcome_block>
+/ trials = [1= Welcome_trial; 2=Consent1; 3=Consent2; 4=Consent3]
+</block>
+
+<block demographics>
+/trials = [ 1 =demographics; 2 = thanks]
+</block>
+
+<block block_final_questionaire>
+	/trials = [1 = final_questionaire_0; 2 = final_questionaire_01; 3 = final_questionaire]
+</block>
+
+<surveypage final_questionaire>
+	/showpagenumbers = false
+	/caption = "Please answer these final questions about your experience with this experiment"
+	/questions = [1= Survey_Q3]
+	/navigationbuttonfontstyle =  ("Trebuchet MS", 2.8%, false, false, false, false, 5, 1)
+	/ontrialend = [values.survey_Q3 = checkboxes.Survey_Q3.response]
+	/branch = [if (checkboxes.Survey_Q3.response == "yes") surveypage.final_questionaire_4;]
+
+</surveypage>
+
+<surveypage final_questionaire_4>
+	/showpagenumbers = false
+	/caption = "Please answer these final questions about your experience with this experiment"
+	/questions = [1 = Survey_Q4;]
+	/navigationbuttonfontstyle =  ("Trebuchet MS", 2.8%, false, false, false, false, 5, 1)
+	/ontrialend = [values.survey_Q4 = textbox.Survey_Q4.response]
+	
+	/branch = [surveypage.final_questionaire_5;]
+
+</surveypage>
+
+<surveypage final_questionaire_5>
+	/showpagenumbers = false
+	/caption = "Please answer these final questions about your experience with this experiment"
+	/questions = [1= Survey_Q5]
+	/navigationbuttonfontstyle =  ("Trebuchet MS", 2.8%, false, false, false, false, 5, 1)
+	/ontrialend = [values.survey_Q5 = textbox.Survey_Q5.response]
+</surveypage>
+
+<surveypage final_questionaire_0>
+	/showpagenumbers = false
+	/caption = "Please answer these final questions about your experience with this experiment"
+	/questions = [1= Survey_Q1]
+	/navigationbuttonfontstyle =  ("Trebuchet MS", 2.8%, false, false, false, false, 5, 1)
+	/ontrialend = [values.survey_Q1 = textbox.Survey_Q1.response]
+</surveypage>
+
+<surveypage final_questionaire_01>
+	/showpagenumbers = false
+	/caption = "Please answer these final questions about your experience with this experiment"
+	/questions = [1= Survey_Q2]
+	/navigationbuttonfontstyle =  ("Trebuchet MS", 2.8%, false, false, false, false, 5, 1)
+	/ontrialend = [values.survey_Q2 = textbox.Survey_Q2.response]
+</surveypage>
+
+
+<checkboxes Survey_Q3>
+/ caption="Apart from the robot's motion, do you think something else changed between each of the robot's movements?"
+/ options=("Yes", "No")
+/ range = (1,1)
+/ orientation = horizontal
+/ required = true
+/ position = (10%, 25%) 
+/ fontstyle = ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+</checkboxes>
+
+<textbox Survey_Q4>
+/ caption = "What do you think this change was?"
+/ required = true
+/ orientation = horizontal
+/ position = (10%, 50%)
+/ fontstyle = ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+</textbox>
+
+<textbox Survey_Q5>
+/ caption = "The factor that was changed between trials was one characteristic of the sound the robot made. ~n  Specifically, what do you think was the sound characteristic that was changed?	"
+/ required = true
+/ orientation = horizontal
+/ position = (10%, 75%)
+/ fontstyle = ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+</textbox>
+
+<textbox Survey_Q1>
+/ caption = "What do you think you think the hypothesis for this experiment was? ~n  Try to be specific about what we were measuring, and why you think we did it. "
+/ required = true
+/ orientation = horizontal
+/ position = (10%, 20%)
+/ fontstyle = ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+</textbox>
+
+<textbox Survey_Q2>
+/ caption = ("
+•	We hope to publish some of these results in scientific papers, so it is important for ~n us to collect good data. 
+
+•	Is there any reason why we should not use your data from any part of the experiment ~n (i.e. you  experienced technical problems, were interrupted, or did not understand the instructions)?
+	
+•	Please be honest here, your answer will not affect any reimbursement.
+
+You can also use this space to give us some feedback about the study. ")
+/ required = true
+/ orientation = horizontal
+/ position = (10%, 20%)
+/ fontstyle = ("Trebuchet MS", 2.5%, false, false, false, false, 5, 1)
+</textbox>
+
+
+<surveypage demographics>
+/ stimulusframes = [1 = thanks]
+/ questions = [1 = Age; 2 = Sex; 3 = Handedness]
+/ showmousecursor = true
+/ nextlabel = "Continue"
+/ nextbuttonposition = (85%, 85%)
+/ navigationbuttonfontstyle =  ("Trebuchet MS", 2.8%, false, false, false, false, 5, 1)
+/ showpagenumbers = false
+/ ontrialend = [values.age = textbox.Age.response; values.Sex = checkboxes.Sex.response; values.Handedness = checkboxes.Handedness.response]
+</surveypage>
+
+<text thx>
+/ items = ("Continue")
+/ size = (8%, 4.5%)
+/ position = (89%, 87%)
+/ fontstyle = ("Trebuchet MS", 3.1%, false, false, false, false, 5, 1)
+/ txbgcolor = white
+/ txcolor = black
+</text>
+
+<text thankspic>
+/ items = ("
+			Thank you for agreeing to take part!
+
+•	We hope to publish some of these results in scientific papers, so it is 
+	important for us to collect good data. 
+	
+•	I confirm that I am using wired earphones/headphones and completing the study in a quiet environment.
+
+•	Please turn off your phone so it doesn't distract you.
+
+•	If you wear glasses or contact lenses at a computer, please put them 
+	on now. 
+")
+/ position = (50%, 50%)
+</text>
+
+
+<trial thanks>
+/ pretrialpause = 500
+/ stimulusframes = [1=thankspic, thx]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (thx)
+</trial>
+
+
+<trial Withdrawn>
+/ pretrialpause = 500
+/ stimulusframes = [1=withdraw, oops, continuewithdraw]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (oops, continuewithdraw)
+/ branch = [if (trial.Withdrawn.response == "continuewithdraw") trial.debrief3]
+/ branch = [if (trial.withdrawn.response == "oops" && trial.Consent1.response == "disagree") trial.Consent1]
+/ branch = [if (trial.withdrawn.response == "oops" && trial.Consent2.response == "disagree") trial.Consent2]
+/ branch = [if (trial.withdrawn.response == "oops" && trial.Consent3.response == "disagree") trial.Consent3]
+</trial>
+
+<text Instruct_text>
+/items = ("Intructions")
+/ fontstyle = ("Trebuchet MS", 3.5%, false, false, false, false, 5, 1)
+/ position = (50%, 7%)
+</text>
+
+<picture Instructions_image_1>
+/ items = ("instruction1.png")
+/ size = (80%, 80%)
+/ position = (50%, 50%)
+</picture>
+
+
+<picture Instructions_image_2>
+/ items = ("instruction2.png")
+/ size = (80%, 80%)
+/ position = (50%, 50%)
+</picture>
+
+<picture Instructions_image_3>
+/ items = ("instruction3.png")
+/ size = (80%, 80%)
+/ position = (50%, 50%)
+</picture>
+
+<picture Instructions_image_break>
+/ items = ("instruction1_break.png")
+/ size = (80%, 80%)
+/ position = (50%, 50%)
+</picture>
+
+<trial Instructions1>
+/ pretrialpause = 500
+/ stimulusframes = [1=Instructions_image_1, continue]
+/ inputdevice = mouse
+/ showmousecursor = true
+/ validresponse = (continue)
+/ branch = [if (trial.Instructions1.response == "continue") trial.Instructions2]
+</trial>
+
+<trial Instructions2>
+/ pretrialpause = 500
+/ stimulusframes = [1=Instructions_image_2, startpractice, back]
+/ inputdevice = mouse
+/ showmousecursor = true
+/ validresponse = (continue, back)
+/ branch = [if(trial.Instructions2.response == "continue") block.reach_block_practice;
+			else if(trial.Instructions2.response == "back") trial.Instructions1]
+</trial>
+
+<trial Instructions3>
+/ pretrialpause = 500
+/ stimulusframes = [1=Instructions_image_3,startpractice, back]
+/ inputdevice = mouse
+/ showmousecursor = true
+/ validresponse = (startpractice, back)
+/ branch = [if (trial.Instructions3.response == "back") trial.Instructions2;]
+</trial>
+
+
+<trial Instructions1_break>
+/ pretrialpause = 500
+/ stimulusframes = [1=Instructions_image_break, clock.stopwatch_1, resuming_expt]
+/ inputdevice = mouse
+/ showmousecursor = true
+/ validresponse = (continue)
+// branch = [if (trial.Instructions1.response == "continue") trial.Instructions2_break]
+/ trialduration = 15000
+
+</trial>
+
+<trial Instructions2_break>
+/ pretrialpause = 500
+/ stimulusframes = [1=Instructions_image_2, clock.stopwatch_2, resuming_expt]
+/ inputdevice = mouse
+/ showmousecursor = true
+/ validresponse = (continue, back)
+/ branch = [if(trial.Instructions2.response == "continue") block.reach_block_practice;
+			else if(trial.Instructions2.response == "back") trial.Instructions1_break]
+/ trialduration = 15000
+
+</trial>
+
+<trial Instructions3_break>
+/ pretrialpause = 500
+/ stimulusframes = [1=Instructions_image_3,startpractice, back]
+/ inputdevice = mouse
+/ showmousecursor = true
+/ validresponse = (startpractice, back)
+/ branch = [if (trial.Instructions3.response == "back") trial.Instructions2;]
+</trial>
+
+<trial begin_practice>
+/ pretrialpause = 500
+/ stimulusframes = [1=begin_practice]
+/timeout = 1000
+</trial>
+
+<text begin_practice>
+/ items = ("Practice round loading...")
+/ position = (50%, 50%)
+/ fontstyle =  ("Trebuchet MS", 2.4%, false, false, false, false, 5, 1)
+/ hjustify = left
+</text>
+
+<text resuming_expt>
+	/items = ("Experiment resuming in:       s")
+	/ position = (43%, 90%)
+	/ fontstyle =  ("Trebuchet MS", 2.4%, false, false, false, false, 5, 1)
+	/ hjustify = center
+</text>
+
+<block Instruction_block>
+/trials = [1 = Instructions1;2 = begin_practice]
+/ branch = [if (trial.Instructions2.response == "startpractice") block.reach_block_practice]
+
+</block>
+
+<block reach_block_practice>
+/ onblockbegin = [values.audio_condition_select = ceil(rand(0, 2));
+				  values.first_frame_timeout_select = ceil(rand(0, 10));
+				  values.first_frame_timout = 1000 + values.first_frame_timeout_select * 150;
+				  values.probe_stim_select = ceil(rand(0, 4))]
+/ onblockend = [values.practice_num = values.practice_num + 1;]
+
+	/trials = [1= F0_M1_trial; 2 = R1_trial; 3 = Probe_Measure;]			
+	/branch = [if(values.practice_num <= 7) block.withdraw_block_practice;
+			   else if (values.practice_num > 7) block.withdraw_block_practice_final]
+</block>
+
+<block withdraw_block_practice>
+/ onblockbegin = [values.audio_condition_select = ceil(rand(0, 2));
+				  values.first_frame_timeout_select = ceil(rand(0, 10));
+				  values.first_frame_timout = 1000 + values.first_frame_timeout_select * 150;
+				  values.probe_stim_select = ceil(rand(13, 16))]
+
+
+				  / onblockend = [values.practice_num = values.practice_num + 1;]
+				 
+/trials = [1=F0_M1_trial; 2 = W1_trial; 3 = Probe_Measure;]
+				  
+	/ branch = [block.reach_block_practice]
+</block>
+
+<block withdraw_block_practice_final>
+/ onblockbegin = [values.audio_condition_select = ceil(rand(0, 2));
+				  values.first_frame_timeout_select = ceil(rand(0, 10));
+				  values.first_frame_timout = 1000 + values.first_frame_timeout_select * 150]
+				 
+	/trials = [1= F0_M1_trial; 2 = W1_trial; 3 = mouse_test; 4 = centermouse; 5 = repractice]
+				  
+	/ branch = [if (trial.repractice.response == "re_practice") block.reach_block_practice;
+				else if(trial.repractice.response == "back_2_instructions") block.Instruction_block]
+</block>
+
+<trial repractice>
+/ pretrialpause = 500
+/ stimulusframes = [1=start_experiment,back_2_instructions, re_practice]
+/ inputdevice = mouse
+/ showmousecursor = true
+/ validresponse = (re_practice, back_2_instructions, start_experiment)
+</trial>
+
+<text  back_2_instructions>
+/ items = ("Back to instructions?")
+/ position = (25%, 50%)
+/ fontstyle =  ("Trebuchet MS", 2.4%, false, false, false, false, 5, 1)
+/ hjustify = left
+</text>
+
+
+<text start_experiment>
+/ items = ("Start experiment")
+/ position = (75%, 50%)
+/ fontstyle =  ("Trebuchet MS", 2.4%, false, false, false, false, 5, 1)
+/ hjustify = right
+</text>
+
+<text re_practice>
+	
+/ items = ("More Practice?")
+/ position = (50%, 50%)
+/ fontstyle =  ("Trebuchet MS", 2.4%, false, false, false, false, 5, 1)
+/ hjustify = left
+</text>
+
+<block debrief_block>
+/ trials = [1 = debrief1]
+</block>
+
+<text debrief1>
+/ items = ("Thank you for your time
+
+What were we studying?
+
+When we see objects in motion, we may see them differently than how they really are. In particularly, we often see 
+objects move further than they really did. This is known as representational momentum.  representational momentum 
+has been shown to be influenced by other modalities (such as sound).  This experiment aims at investigating how 
+changing the characteristics of the sound of a robot’s movement effects how the motion is perceived.  
+
+In this study, a robot’s arm in motion was shown, while the stopping time of the robot’s movement sound was altered, 
+so that it played either shorter or longer than the duration of movement.  The perception of the robot’s movement 
+was measured using your response to the presented image.  We predict that if a slightly longer sound plays (relative to the 
+visual movement) the final position of the robot hand will be overestimated. In contrast, if the sound stops 
+slightly before the movement finishes, the reach of the movement should be underestimated.  
+Investigating how sound affects perception is important in human-robot interaction as it may 
+lead to methods for designing robots that are easier to predict by humans, 
+improving human-robot task collaboration capabilities.
+
+The data from this study is stored anonymously. 
+It is no longer possible to withdraw your data (if you have not already done so).
+If you have any further questions regarding this study, please contact the experimenter (details below).
+
+This research is carried out by Joel Currie and Professor Patric Bach in the School of Psychology, University of Aberdeen.
+Contact information:
+Joel Currie: 	       j.currie.22@abdn.ac.uk
+Professor Patric Bach: patric.bach@abdn.ac.uk
+")
+/ position = (50%, 50%)
+/ fontstyle =  ("Trebuchet MS", 2.4%, false, false, false, false, 5, 1)
+/ hjustify = left
+/size = (80%,80%)
+
+</text>
+
+<text debrief2>
+/ items = ("
+How to uninstall Inquisit Player:
+Instructions for Windows:
+1. Open the 'Programs and Features' applet in Windows Control Panel (called 'Add/Remove Programs' in Windows XP). 
+2. Search for the entry with 'Inquisit 4 Web Player', 'Inquisit 5 Player', or 'Inquisit 6 Player' in the programs list. 
+If you find it, double-click to uninstall.
+
+Instructions for Mac:
+1. Close your browser 
+2. Delete 'Inquisit Player.app' or 'Inquisit Player 6.app' from your /Applications folder 
+3. Or delete 'Inquisit Player.app' or 'Inquisit Player 6.app' from your /Users/(your username)/Applications folder
+
+
+Use the following code to redeem reimbersement: 1481603")
+/ position = (50%, 40%)
+/ fontstyle =  ("Trebuchet MS", 2.4%, false, false, false, false, 5, 1)
+/ hjustify = left
+/size = (80%,80%)
+
+</text>
+
+<trial debrief1>
+/ pretrialpause = 500
+/ stimulusframes = [1 = debrief1, thx]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (thx)
+/ branch = [if (trial.debrief1.response == "thx") trial.debrief2]
+</trial>
+
+
+<trial debrief2>
+/ pretrialpause = 500
+/ stimulusframes = [1 = debrief2, thx]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (thx)
+</trial>
+
+<trial debrief3>
+/ pretrialpause = 500
+/ stimulusframes = [1 = debrief1, thx]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (thx)
+/ branch = [if (trial.debrief3.response == "thx") trial.debrief4]
+</trial>
+
+
+<trial debrief4>
+/ pretrialpause = 500
+/ stimulusframes = [1 = debrief2, thx]
+/ showmousecursor = true
+/ inputdevice = mouse
+/ validresponse = (thx)
+/ branch = [if (trial.debrief4.response == "thx") script.abort()]
+</trial>
+
+
+<block middle_break>
+/ trials = [1 = Instructions1_break; 2= Instructions2_break]
+
+
+</block>
+
+<clock stopwatch_1>
+/ mode = timer
+/ timeout = 30000
+/ txcolor = white
+/ txbgcolor = black
+/ format = "ss"
+/ position = (50%, 90%)
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+</clock>
+
+<clock stopwatch_2>
+/ mode = timer
+/ timeout = 15000
+/ txcolor = white
+/ txbgcolor = black
+/ format = "ss"
+/ position = (50%, 90%)
+/ fontstyle = ("Trebuchet MS", 3%, false, false, false, false, 5, 1)
+</clock>
+
+<trial break>
+/ stimulusframes = [1 = break; 2 = stopwatch_1]
+/ timeout = 30000
+</trial>
+
+
+
+
+
+
+<item Audio_stim_items>
+/1 = "M1S1.wav"
+/2 = "M1S2.wav"
+/3 = "M2S1.wav"
+/4 = "M2S2.wav"
+/5 = "M3S1.wav"
+/6 = "M3S2.wav"
+</item>
+
+
+<item probe_stim_items>
+// R1 Probes
+/1 = "Robot (18).png"
+/2 = "Robot (20).png"
+/3 = "Robot (22).png"
+/4 = "Robot (24).png"
+
+// R2 Probes
+/5 = "Robot (20).png"
+/6 = "Robot (22).png"
+/7 = "Robot (24).png"
+/8 = "Robot (26).png"
+
+// R3 Probes
+/9 = "Robot (22).png"
+/10 = "Robot (24).png"
+/11 = "Robot (26).png"
+/12 = "Robot (28).png"
+
+// W1 Probes
+/13 = "Robot (6).png"
+/14 = "Robot (8).png"
+/15 = "Robot (10).png"
+/16 = "Robot (12).png"
+
+// W2 Probes
+/17 = "Robot (4).png"
+/18 = "Robot (6).png"
+/19 = "Robot (8).png"
+/20 = "Robot (10).png"
+
+// W3 Probes
+/21 = "Robot (2).png"
+/22 = "Robot (4).png"
+/23 = "Robot (6).png"
+/24 = "Robot (8).png"
+
+</item>
+
+<shape blank_stim>
+	/shape = rectangle
+	/color = black
+	/position = (51.9%, 50%)
+	/size = (50%, 50%)
+</shape>
+
+<picture M_F0>
+/ erase = false
+/ items = ("Robot (15).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+<picture R_F1>
+/ erase = false
+/ items = ("Robot (17).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+<picture R_F2>
+/ erase = false
+/ items = ("Robot (19).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+
+<picture R_F3>
+/ erase = false
+/ items = ("Robot (21).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+
+<picture R_F4>
+/ erase = false
+/ items = ("Robot (23).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+<picture R_F5>
+/ erase = false
+/ items = ("Robot (25).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+
+<picture W_F1>
+/ erase = false
+/ items = ("Robot (13).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+<picture W_F2>
+/ erase = false
+/ items = ("Robot (11).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+<picture W_F3>
+/ erase = false
+/ items = ("Robot (9).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+<picture W_F4>
+/ erase = false
+/ items = ("Robot (7).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+<picture W_F5>
+/ erase = false
+/ items = ("Robot (5).png")
+/ position = (49.25%, 41.15%)
+/ size = (50%, 50%)
+</picture>
+
+
+<picture Probe_stim>
+/erase = false
+/items = item.probe_stim_items
+/select = values.probe_stim_select
+/ position = (49.25%, 41.15%)
+/size = (50%, 50%)
+</picture>
+
+
+
+<sound Audiostim>
+	/items = item.Audio_stim_items
+	/select = values.audio_condition_select
+</sound>
+
+
+<block block_R1>
+/ onblockbegin = [values.probe_final_frame_id = 21;
+				  values.i_R1 = noreplace(1, 2);
+				  values.probe_stim_select = noreplace(1, 2, 3, 4);
+				  
+				  if(values.probe_stim_select == 1)
+				  {
+					values.probe_displacement = -3;
+				  }
+				  else if(values.probe_stim_select == 2)
+				  {
+					values.probe_displacement = -1;
+				  }
+				   else if(values.probe_stim_select == 3)
+				  {
+					values.probe_displacement = 1;
+				  }
+				    else if(values.probe_stim_select == 4)
+				  {
+					values.probe_displacement = 3;
+				  }
+
+				  if(values.i_R1 == 1)
+				  {
+					values.audio_condition_select = 1;
+				  }
+				  else if(values.i_R1 == 2)
+				  {
+					values.audio_condition_select = 2;
+				  }
+				
+				  values.first_frame_timeout_select = ceil(rand(0, 10));
+				  values.first_frame_timout = 1000 + values.first_frame_timeout_select * 150;
+				  values.trial_number = values.trial_number + 1]				  					  
+
+				  /trials = [1 = fixation_begin; 2= F0_M1_trial; 3 = R1_trial;4 = Probe_Measure;]
+				  /onblockend = [values.i_R1 = 0]
+
+</block>
+
+<block block_R2>
+/ onblockbegin = [values.probe_final_frame_id = 23;
+				  values.i_R2 = noreplace(1, 2);
+				  values.probe_stim_select = noreplace(5, 6, 7, 8);
+				  if(values.probe_stim_select == 5)
+				  {
+					values.probe_displacement = -3;
+				  }
+				  else if(values.probe_stim_select == 6)
+				  {
+					values.probe_displacement = -1;
+				  }
+				   else if(values.probe_stim_select == 7)
+				  {
+					values.probe_displacement = 1;
+				  }
+				    else if(values.probe_stim_select == 8)
+				  {
+					values.probe_displacement = 3;
+				  }
+				  
+				  if(values.i_R2 == 1)
+				  {
+					values.audio_condition_select = 3;
+				  }
+				  else if(values.i_R2 == 2)
+				  {
+					values.audio_condition_select = 4;
+				  }
+				  
+				  values.first_frame_timeout_select = ceil(rand(0, 10));
+				  values.first_frame_timout = 1000 + values.first_frame_timeout_select * 150;
+				  values.trial_number = values.trial_number + 1]	
+				  
+				  /trials = [1 = fixation_begin; 2= F0_M2_trial; 3 = R2_trial;4 = Probe_Measure;]
+				  /onblockend = [values.i_R2 = 0;]
+</block>
+
+<block block_R3>
+/ onblockbegin = [values.probe_final_frame_id = 25;
+				  values.i_R3 = noreplace(1, 2);
+				  values.probe_stim_select = noreplace(9, 10, 11, 12);
+				  if(values.probe_stim_select == 9)
+				  {
+					values.probe_displacement = -3;
+				  }
+				  else if(values.probe_stim_select == 10)
+				  {
+					values.probe_displacement = -1;
+				  }
+				   else if(values.probe_stim_select == 11)
+				  {
+					values.probe_displacement = 1;
+				  }
+				    else if(values.probe_stim_select == 12)
+				  {
+					values.probe_displacement = 3;
+				  }
+				  
+				  if(values.i_R3 == 1)
+				  {
+					values.audio_condition_select = 5
+				  }
+				  else if(values.i_R3 == 2)
+				  {
+					values.audio_condition_select = 6;
+				  }
+				  
+				  values.first_frame_timeout_select = ceil(rand(0, 10));
+				  values.first_frame_timout = 1000 + values.first_frame_timeout_select * 150;
+				  values.trial_number = values.trial_number + 1]	
+				  
+				  /trials = [1 = fixation_begin; 2= F0_M3_trial; 3 = R3_trial;4 = Probe_Measure;]
+				  /onblockend = [values.i_R3 = 0]
+</block>
+
+
+
+
+<block block_W1>
+/ onblockbegin = [values.probe_final_frame_id = 9;
+				  values.i_W1 = noreplace(1, 2);
+				  values.probe_stim_select = noreplace(13, 14, 15, 16);
+				  
+				  if(values.probe_stim_select == 13)
+				  {
+					values.probe_displacement = 3;
+				  }
+				  else if(values.probe_stim_select == 14)
+				  {
+					values.probe_displacement = 1;
+				  }
+				   else if(values.probe_stim_select == 15)
+				  {
+					values.probe_displacement = -1;
+				  }
+				    else if(values.probe_stim_select == 16)
+				  {
+					values.probe_displacement = -3;
+				  }
+				  
+				  if(values.i_W1 == 1)
+				  {
+					values.audio_condition_select = 1;
+				  }
+				  else if(values.i_W1 == 2)
+				  {
+					values.audio_condition_select = 2;
+				  }
+
+				  values.first_frame_timeout_select = ceil(rand(0, 10));
+				  values.first_frame_timout = 1000 + values.first_frame_timeout_select * 150;
+				  values.trial_number = values.trial_number + 1]	
+				  
+				  /trials = [1 = fixation_begin; 2= F0_M1_trial; 3 = W1_trial;4 = Probe_Measure;]
+				  /onblockend = [values.i_W1 = 0]
+</block>
+
+
+<block block_W2>
+/ onblockbegin = [values.probe_final_frame_id = 7;
+				  values.i_W2 = noreplace(1, 2);
+				  values.probe_stim_select = noreplace(17, 18, 19, 20);
+				  if(values.probe_stim_select == 17)
+				  {
+					values.probe_displacement = 3;
+				  }
+				  else if(values.probe_stim_select == 18)
+				  {
+					values.probe_displacement = 1;
+				  }
+				   else if(values.probe_stim_select == 19)
+				  {
+					values.probe_displacement = -1;
+				  }
+				    else if(values.probe_stim_select == 20)
+				  {
+					values.probe_displacement = -3;
+				  }
+				  
+				  if(values.i_W2 == 1)
+				  {
+					values.audio_condition_select = 3;
+				  }
+				  else if(values.i_W2 == 2)
+				  {
+					values.audio_condition_select = 4;
+				  }
+			
+				  values.first_frame_timeout_select = ceil(rand(0, 10));
+				  values.first_frame_timout = 1000 + values.first_frame_timeout_select * 150;
+				  values.trial_number = values.trial_number + 1]	
+				  
+				  /trials = [1 = fixation_begin; 2= F0_M2_trial; 3 = W2_trial;4 = Probe_Measure;]
+				  /onblockend = [values.i_W2 = 0]
+</block>
+
+<block block_W3>
+/ onblockbegin = [values.probe_final_frame_id = 5;
+				  values.i_W3 = noreplace(1, 2);
+				  values.probe_stim_select = noreplace(21, 22, 23, 24);
+
+				  	if(values.probe_stim_select == 21)
+				  {
+					values.probe_displacement = 3;
+				  }
+				  else if(values.probe_stim_select == 22)
+				  {
+					values.probe_displacement = 1;
+				  }
+				   else if(values.probe_stim_select == 23)
+				  {
+					values.probe_displacement = -1;
+				  }
+				    else if(values.probe_stim_select == 24)
+				  {
+					values.probe_displacement = -3;
+				  }
+				  if(values.i_W3 == 1)
+				  {
+					values.audio_condition_select = 5;
+				  }
+				  else if(values.i_W3 == 2)
+				  {
+					values.audio_condition_select = 6;
+				  }
+			
+				  values.first_frame_timeout_select = ceil(rand(0, 10));
+				  values.first_frame_timout = 1000 + values.first_frame_timeout_select * 150;
+				  values.trial_number = values.trial_number + 1]	
+				  
+				  /trials = [1 = fixation_begin; 2= F0_M3_trial; 3 = W3_trial;4 = Probe_Measure;]
+				  /onblockend = [values.i_W3 = 0]
+</block>
+
+
+
+
+
+
+<trial F0_M1_trial>	
+	/stimulustimes = [0 = text.reminder; 0=picture.M_F0]
+	/timeout = values.first_frame_timout
+</trial>
+
+
+<trial F0_M2_trial>	
+	/stimulustimes = [0 = text.Reminder; 0=picture.M_F0]
+	/timeout = values.first_frame_timout
+</trial>
+
+<trial F0_M3_trial>	
+	/stimulustimes = [0 = text.Reminder; 0=picture.M_F0]
+	/timeout = values.first_frame_timout
+</trial>
+
+
+
+<trial R1_trial>
+	/ stimulustimes = [0 = text.Reminder; 0 = sound.Audiostim;0=picture.R_F1;82=picture.R_F2;164=picture.R_F3;248 = shape.blank_stim]
+	/ timeout = 428
+</trial>
+
+
+<trial R2_trial>
+	/ stimulustimes = [0 = text.Reminder; 0 = sound.Audiostim;0=picture.R_F1;82=picture.R_F2;164=picture.R_F3;246=picture.R_F4;328=shape.blank_stim]
+	/ timeout = 510
+</trial>
+
+<trial R3_trial>
+	/ stimulustimes = [0 = text.Reminder; 0 = sound.Audiostim;0=picture.R_F1;82=picture.R_F2;164=picture.R_F3;246=picture.R_F4;328=picture.R_F5; 410 = shape.blank_stim]
+	/ timeout = 592
+</trial>
+
+
+<trial W1_trial>
+	/ stimulustimes = [0 = text.Reminder; 0 = sound.Audiostim;0=picture.W_F1;82=picture.W_F2;164=picture.W_F3;246=shape.blank_stim]
+	/ timeout = 428
+</trial>
+
+<trial W2_trial>
+	/ stimulustimes = [0 = text.Reminder; 0 = sound.Audiostim;0=picture.W_F1;82=picture.W_F2;164=picture.W_F3;246=picture.W_F4;328=shape.blank_stim]
+	/ timeout = 510
+</trial>
+
+<trial W3_trial>
+	/ stimulustimes = [0 = text.Reminder; 0 = sound.Audiostim;0=picture.W_F1;82=picture.W_F2;164=picture.W_F3;246=picture.W_F4;328=picture.W_F5; 410 = shape.blank_stim]
+	/ timeout = 592
+</trial>
+
+
+
+<trial Probe_Measure>
+	/monkeyresponse = (57)
+	/beginresponsetime = 200
+	//stimulustimes = [0 = clearscreen; 0 = text.Reminder; 250=picture.Probe_stim; 500 = shape.blank_stim]
+	/stimulustimes = [0 = clearscreen; 0 = text.Reminder; 250=picture.Probe_stim]
+
+	/inputdevice = keyboard
+	/validresponse = (57, noresponse)
+	/correctresponse = (57)
+	/trialduration = 5000
+</trial>
+
+<trial fixation_begin>
+	/stimulustimes = [0 = clearscreen; 0 = shape.blank_stim; 500 = text.fixation]
+	/trialduration = 1000
+</trial>
+
+
+
+
+<trial Mouse_test>
+/ ontrialbegin = [values.mousey = 0; values.responsey = 0; values.mousex = 0; values.responsex = 0;]
+/ ontrialend = [values.mousey = mouse.y; values.responsey = trial.Mouse_test.responsey; values.mousex = mouse.x; values.responsex = trial.Mouse_test.responsex;  values.response_time = trial.Mouse_test.altlatency;]
+/ stimulusframes = [1 = clearscreen]
+/ inputdevice = mouse
+/ validresponse = (lbuttondown)
+/ recorddata = true
+/ timeout = 5000
+// branch = [trial.showcoordinates]
+</trial>
+
+
+<trial centermouse>
+/ stimulusframes = [1 = blank_stim; 2=centersquare; 1 = please_continue_text]
+/ inputdevice = mouse
+/ validresponse = (centersquare)
+</trial>
+
+<shape centersquare>
+/ shape = circle
+/ size = (1%, 1.7%)
+/ position = (51.9%, 59.7%)
+/ color = (green)
+</shape>
+
+
+<text fixation>
+	/items = ("+")
+	/position = (50%, 50%)
+</text>
+
+<text please_continue_text>
+/ items = ("Please click the green circle to continue")
+/ txcolor = (255, 255, 255)
+/ position = (50%, 40%)
+</text>
+
+<trial showcoordinates>
+/ stimulusframes = [1=coordinates]
+/ validresponse = (57)
+</trial>
+
+<text coordinates>
+/ items = ("Mouse X: <%values.mousex%> | Mouse Y: <%values.mousey%> ")
+//| Timeout_i: <%values.timeout_value%>")
+ /items = ("Press Space to Continue")
+</text>
+
+
+<data>
+/ audit = true
+/ columns = (date time computer.platform computer.os display.canvaswidth display.canvasheight display.width display.height display.refreshrate
+			 blockcode	trialcode values.trial_number values.Age 
+			 values.Sex values.Handedness values.response_time values.mousex values.mousey values.audio_condition_select values.probe_final_frame_id values.probe_displacement trial.Probe_Measure.response values.survey_Q1 values.survey_Q2 values.survey_Q3 values.survey_Q4 values.survey_Q5)
+</data>
