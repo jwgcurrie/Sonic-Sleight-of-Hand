@@ -1,6 +1,4 @@
-# Consequential sound induces illusory distortions in the perception and prediction of robot motion
- Preprint available @ https://osf.io/47uam/
-
+**Consequential sound induces illusory distortions in the perception and prediction of robot motion**
 Do sounds affect human perception & prediction of a robot’s actions? We found that subtle changes to robot sounds modulate people's localisation responses & push real-time perception towards the predicted future of robot actions.
 
 Human collaboration is built on our ability to effortlessly predict another’s behaviour. From manufacturing to the food delivery, interaction between humans & robots is becoming more common–unfortunately, people find robot movement unpredictably, hindering the interaction.
@@ -31,6 +29,8 @@ What does this mean? The consequential sound a robot makes as it moves can not o
 Together these results offer new methods of measure how people really ‘perceive’ a robot’s actions, and that people’s representation of robot actions can be supplemented/contaminated by controlling illusory effects.
 
 Sound is just one tool to bias robot motion. We hope that by understanding how people truly represent and predict robot action, these factors can be included/accounted for in the design of more predictable robot behaviours, improving human-robot collaboration.  
+
+Preprint available @ https://osf.io/47uam/
 
 Cite as:
 @misc{currie_giannaccini_bach_2023,
