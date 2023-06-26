@@ -161,8 +161,8 @@ setwd(di)
     group_by(ID, Sound, probe_displacement, Action_Dir) %>% 
     dplyr::summarize(m_response = 1 - mean(Probe_response),
                      SD = sd(Probe_response),
-                     CI_upper = m_response + 0.95 * SD/sqrt(nrow(participants_include)),
-                     CI_lower = m_response - 0.95 * SD/sqrt(nrow(participants_include)))
+                     CI_upper = m_response + 1.96 * SD/sqrt(nrow(participants_include)),
+                     CI_lower = m_response - 1.96 * SD/sqrt(nrow(participants_include)))
   
   
   RM_error <- diff_scores %>% 
@@ -185,8 +185,8 @@ setwd(di)
     group_by(Sound, probe_displacement, Action_Dir) %>% 
     dplyr::summarize(m_response = 1 - mean(Probe_response),
                      SD = sd(Probe_response),
-                     CI_upper = m_response + 0.95 * RM_error,
-                     CI_lower = m_response - 0.95 * RM_error)
+                     CI_upper = m_response + 1.96 * RM_error,
+                     CI_lower = m_response - 1.96 * RM_error)
   
   
   R_plot <- ggplot(data=filter(diff_scores, Action_Dir == 'R'), aes(x=probe_displacement, y=m_response, group=Sound))+
@@ -250,8 +250,8 @@ setwd(di)
   plot_RM_by_condition_weighted <- RM_by_condition %>%
     group_by(Action_Dir, Sound) %>%
     summarize(RM_weighted_means = sum(Weighted_response)/sum(m_resp),
-              CI2_upper = RM_weighted_means + 0.95 * RM_error,
-              CI2_lower = RM_weighted_means - 0.95 * RM_error)
+              CI2_upper = RM_weighted_means + 1.96 * RM_error,
+              CI2_lower = RM_weighted_means - 1.96 * RM_error)
   
 
 
