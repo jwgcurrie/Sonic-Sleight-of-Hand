@@ -1,4 +1,17 @@
-**Consequential sound induces illusory distortions in the perception and prediction of robot motion**
+**Sonic Sleight of Hand: Sound Induces Illusory Distortions in the Perception and Prediction of Robot Action**
+
+Code and data repository for the following publication: https://doi.org/10.1007/s12369-024-01105-5
+
+Cite as:
+@article{currie2024sonic,
+  title={Sonic Sleight of Hand: Sound Induces Illusory Distortions in the Perception and Prediction of Robot Action},
+  author={Currie, Joel and Giannaccini, Maria Elena and Bach, Patric},
+  journal={International Journal of Social Robotics},
+  pages={1--19},
+  year={2024},
+  publisher={Springer}
+}
+
 Do sounds affect human perception & prediction of a robot’s actions? We found that subtle changes to robot sounds modulate people's localisation responses & push real-time perception towards the predicted future of robot actions.
 
 Human collaboration is built on our ability to effortlessly predict another’s behaviour. From manufacturing to the food delivery, interaction between humans & robots is becoming more common–unfortunately, people find robot movement unpredictably, hindering the interaction.
@@ -30,15 +43,6 @@ Together these results offer new methods of measure how people really ‘perceiv
 
 Sound is just one tool to bias robot motion. We hope that by understanding how people truly represent and predict robot action, these factors can be included/accounted for in the design of more predictable robot behaviours, improving human-robot collaboration.  
 
-Preprint available @ https://osf.io/47uam/
 
-Cite as:
-@misc{currie_giannaccini_bach_2023,
- title={Consequential sound induces illusory distortions in the perception and prediction of robot motion},
- url={osf.io/47uam},
- DOI={10.31219/osf.io/47uam},
- publisher={OSF Preprints},
- author={Currie, Joel and Giannaccini, Maria E and Bach, Patric},
- year={2023},
- month={Jun}
-}
+
+
